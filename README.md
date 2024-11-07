@@ -25,7 +25,7 @@ The first task was to identify and remove any columns filled entirely with null 
 data.drop(columns='country_name', inplace=True)
 ```
 
-![]()
+![](https://github.com/sanmyyung/Traffic-Violations-Data-Analysis/blob/main/Images/Q1.JPG)
 ### 2. For Speeding, Were Men or Women Stopped More Often?
 To examine if there was a gender pattern in speeding stops, I filtered the data specifically for speeding violations and counted stops by gender:
 ```python
@@ -33,7 +33,8 @@ speeding_df = data[data['violation'] == 'Speeding']
 gender_counts = speeding_df['driver_gender'].value_counts()
 ```
 
-![]()
+![](https://github.com/sanmyyung/Traffic-Violations-Data-Analysis/blob/main/Images/Q2.JPG)
+
 **Result:** Men were stopped more often for speeding.
 
 ### 3. Does Gender Affect Who Gets Searched During a Stop?
@@ -43,7 +44,8 @@ I investigated whether gender influences the likelihood of a search during a tra
 data.groupby('driver_gender').search_conducted.sum()
 ```
 
-![]()
+![](https://github.com/sanmyyung/Traffic-Violations-Data-Analysis/blob/main/Images/Q3.JPG)
+
 **Result:** Men were more likely to be searched than women.
 
 ### 4. What is the Mean Stop Duration?
@@ -54,8 +56,9 @@ data['stop_duration'] = data['stop_duration'].map({'0-15 Min': 7.5, '16-30 Min':
 mean_stop_duration = data['stop_duration'].mean()
 ```
 
-![]()
-Mean Stop Duration: 12.19 minutes.
+![](https://github.com/sanmyyung/Traffic-Violations-Data-Analysis/blob/main/Images/Q4.JPG)
+
+**Result:** Mean Stop Duration: 12.19 minutes.
 
 ### 5. Compare the Age Distributions for Each Violation
 To understand age distributions across different violation types, I grouped the data by violation type and generated descriptive statistics for driver age:
@@ -64,7 +67,8 @@ To understand age distributions across different violation types, I grouped the 
 data.groupby('violation')['driver_age'].describe()
 ```
 
-![]()
+![](https://github.com/sanmyyung/Traffic-Violations-Data-Analysis/blob/main/Images/Q5.JPG)
+
 This provided insights into age trends associated with each type of violation.
 
 ### Conclusion

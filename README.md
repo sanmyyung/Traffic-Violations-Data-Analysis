@@ -1,4 +1,4 @@
-# Traffic Violations Data Analysis
+# Traffic Violations Data Analysis using Python
 
 In this project, I analyzed a traffic stop dataset to explore patterns related to gender, age, violation types, and other variables. Using Python and Pandas, I investigated key questions around who gets stopped, searched, and how long stops last. This analysis provides insights into how different demographics experience traffic stops.
 
